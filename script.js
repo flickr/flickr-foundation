@@ -5,23 +5,10 @@ const submitSignup = (e) => {
   let inputNode = e.target.querySelector('input')
   let buttonNode = e.target.querySelector('button')
   let email = e.target.firstElementChild.value
-  let data = {
-    "listId": '1193995',
-    "subscribers": [
-      {
-        "email": email,
-        "mergeNestedObjects": true
-      }
-    ]
-  }
 
-  fetch(`https://api.iterable.com/api/lists/subscribe?api_key=`, {
+  fetch(`https://www.smugmug.com/newsletter/signup?email=${email}`, {
     method: 'POST',
-    mode: 'cors',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
+    mode: 'cors'
   })
     .then(r => r.json())
     .then(r => {
