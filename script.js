@@ -13,13 +13,14 @@ const submitSignup = (e) => {
     .then(r => r.json())
     .then(r => {
       console.log(r)
-      console.log(errorNode)
       inputNode.classList.add('is-hidden')
       buttonNode.classList.add('is-hidden')
       errorNode.classList.add('is-active')
     })
     .catch(e => {
-      console.log(errorNode)
+      inputNode.classList.add('is-hidden')
+      buttonNode.classList.add('is-hidden')
+      errorNode.classList.add('is-active')
     })
 }
 
