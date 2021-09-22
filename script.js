@@ -6,7 +6,7 @@ const submitSignup = (e) => {
   let buttonNode = e.target.querySelector('button')
   let email = e.target.firstElementChild.value
 
-  fetch(`https://www.smugmug.com/newsletter/signup?email=${email}`, {
+  fetch(`https://www.smugmug.com/newsletter/flickr-foundation?email=${email}`, {
     method: 'POST',
     mode: 'cors'
   })
