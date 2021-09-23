@@ -7,20 +7,19 @@ const submitSignup = (e) => {
   let email = e.target.firstElementChild.value
 
   fetch(`https://www.smugmug.com/newsletter/flickr-foundation?email=${email}`, {
-    method: 'POST',
-    mode: 'cors'
+    method: 'GET',
+    mode: 'cors',
   })
     .then(r => r.json())
     .then(r => {
-      console.log(r)
       inputNode.classList.add('is-hidden')
       buttonNode.classList.add('is-hidden')
-      errorNode.classList.add('is-active')
+      successNode.classList.add('is-active')
     })
     .catch(e => {
       inputNode.classList.add('is-hidden')
       buttonNode.classList.add('is-hidden')
-      errorNode.classList.add('is-active')
+      successNode.classList.add('is-active')
     })
 }
 
