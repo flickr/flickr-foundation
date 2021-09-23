@@ -201,13 +201,16 @@ svg {
 }
 
 svg.flickr-logo {
-  width: 250px;
-  height: 42px;
+  width: 220px;
+  height: 61px;
+  position: absolute;
+  top: 0px;
 }
 
 .search-link {
   color: var(--white);
   display: flex;
+  padding: 6px 0;
 }
 
 .search-link:hover {
@@ -328,7 +331,7 @@ nav input {
   background-image: url(https://photos.smugmug.com/Flickr-Foundation/Flickr-Foundation-Web/i-PdJJCpB/0/3a15df6b/X3/picture-background-X3.jpg);
   background-size: cover;
   background-position: center bottom;
-  padding-bottom: clamp(320px, 45vw, 550px);
+  padding-bottom: clamp(470px, 45vw, 550px);
   position: relative;
 }
 
@@ -403,6 +406,7 @@ nav input {
   font-size: 18px;
   outline: none;
   border: none;
+  max-width: calc(100% - 144px);
 }
 
 .contact-block button {
@@ -442,6 +446,15 @@ nav input {
 
 .flickr-footer-logo {
   width: 100px;
+}
+
+.group-swap {
+  display: flex;
+  flex-direction: column;
+}
+.copy-group {
+  order: -1;
+  margin-bottom: 24px;
 }
 
 @media (min-width: 720px) {
@@ -497,6 +510,10 @@ nav input {
   .positive-margin { margin-top: calc(96px + var(--overlap)); }
   .photo-group {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .copy-group {
+    order: 1;
+    margin-bottom: 0;
   }
   .photo-group * {
     grid-row: 1/3;
