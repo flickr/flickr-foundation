@@ -331,7 +331,7 @@ nav input {
   background-image: url(https://photos.smugmug.com/Flickr-Foundation/Flickr-Foundation-Web/i-PdJJCpB/0/3a15df6b/X3/picture-background-X3.jpg);
   background-size: cover;
   background-position: center bottom;
-  padding-bottom: clamp(470px, 45vw, 550px);
+  padding-bottom: clamp(470px, 45vw, 840px);
   position: relative;
 }
 
