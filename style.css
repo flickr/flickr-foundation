@@ -322,6 +322,7 @@ nav input {
 
 .copy-notes li {
   margin-bottom: 24px;
+  color: gray;
 }
 .copy-notes li:last-of-type {
   margin-bottom: 0;
