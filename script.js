@@ -44,7 +44,7 @@ const newsletterSignup = () => {
 
 const submitSearch = (e) => {
   e.preventDefault()
-  let term = e.target.firstElementChild.value
+  let term = e.target[0].value
   window.location = `https://www.flickr.com/search/?w=commons&q=${term}`
 }
 
